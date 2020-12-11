@@ -1,7 +1,7 @@
 # A server which uses mediapipe with a camera (webcam) to detect hands. It draws
 # the hands on the screen, and hosts a flask server in another thread to allow 
 # getting the most recent hands data over the web. The data is accessible from
-# localhost:5000/hands via get requests, and it is in the JSON format.
+# localhost:5000 via get requests, and it is in the JSON format.
 #
 # Author: Ardalan Ahanchi
 # Date: November 2020
