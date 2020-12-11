@@ -207,7 +207,7 @@ def main():
     cam_id = DEFAULT_CAMERA_ID
     
     # If we have a paramter passed, modify the camera id.
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 2:
         # If the user requested the help message, display it.
         if sys.argv[1] == "-h" or sys.argv[1] == "--help":
             print("A program which detects hand coordinates using mediapipe.")
@@ -216,13 +216,13 @@ def main():
             print("Date: November 2020\n")
             print("To use: python3 server.py")
             print("        python3 server.py [camera_id]")
-            
-        # Try to convert the camera ID to an integer and set it.
-        try:  
-            cam_id = int(sys.argv[1])
-        except:
-            cam_id = DEFAULT_CAMERA_ID
-            print("Invalid camera ID passed. Using default.")
+        else:
+            # Try to convert the camera ID to an integer and set it.
+            try:  
+                cam_id = int(sys.argv[1])
+            except:
+                cam_id = DEFAULT_CAMERA_ID
+                print("Invalid camera ID passed. Using default.")
     
     # Print the initialization message.
     print("Starting the server for camera", cam_id)
