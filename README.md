@@ -8,8 +8,8 @@ A RESTful server which can get hand recognition data from mediapipe and host it 
 * Flask `pip3 install Flask`
 
 ## To run
-Run the server program, the first argument is the camera ID.
-* Camera ID 0: `python3 server.py 0`
+Run the server program. Optionally, you can pass the camera ID as the first argument.
+* Camera ID 0: `python3 server.py`
 * Camera ID 2: `python3 server.py 2`
 
 ## Endpoints
