@@ -157,6 +157,10 @@ def start_detection(camera_id, detection_confidence, tracking_confidence):
                 # Get the label of this entry ("Left", "Right") for using in dict.
                 label = results.multi_handedness[idx].classification[0].label
                 
+                # Fix the labels (carriage return) for windows users if necessary.
+                if label[-1] == "\r":
+                    label = label[:-1]
+                
                 # Get the hand landmarks based on the index of the classification
                 landmarks = results.multi_hand_landmarks[idx]
                 
